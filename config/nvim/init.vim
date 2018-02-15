@@ -31,22 +31,19 @@ set backspace=indent,eol,start	" Backspace behaviour
 
 
 "" Plugins
-" To install the plugins, run cmd: nvim +PluginInstall +qall
-filetype off
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
+" To install the plugins, run cmd in nvim: :PlugInstall
+call plug#begin('~/.config/nvim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-syntastic/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 
 "" Syntastic config

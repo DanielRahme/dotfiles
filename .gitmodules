@@ -27,4 +27,4 @@
 	url = git@github.com:tpope/vim-surround.git
 [submodule "config/nvim/plugged/awesome-vim-colorschemes"]
 	path = config/nvim/plugged/awesome-vim-colorschemes
-	url = git@github.com:rafi/awesome-vim-colorschemes
+	url = git@github.com:rafi/awesome-vim-colorschemes.git

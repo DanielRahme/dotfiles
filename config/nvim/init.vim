@@ -43,6 +43,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 
@@ -68,3 +69,7 @@ let g:airline_theme = 'dark'
 
 "" Commands
 inoremap jj <Esc>
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p

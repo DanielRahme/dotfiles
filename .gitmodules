@@ -1,30 +1,43 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+
 [submodule "config/nvim/plugged/syntastic"]
 	path = config/nvim/plugged/syntastic
 	url = git@github.com:vim-syntastic/syntastic.git
+
 [submodule "config/nvim/plugged/vim-airline"]
 	path = config/nvim/plugged/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
+
 [submodule "config/nvim/plugged/nerdtree"]
 	path = config/nvim/plugged/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
+
 [submodule "config/nvim/plugged/vim-airline-themes"]
 	path = config/nvim/plugged/vim-airline-themes
 	url = git@github.com:vim-airline/vim-airline-themes.git
+
 [submodule "config/nvim/plugged/vim-fugitive"]
 	path = config/nvim/plugged/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+
 [submodule "config/nvim/plugged/vim-gitgutter"]
 	path = config/nvim/plugged/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
+
 [submodule "config/nvim/plugged/vim-sensible"]
 	path = config/nvim/plugged/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
+
 [submodule "config/nvim/plugged/vim-surround"]
 	path = config/nvim/plugged/vim-surround
 	url = git@github.com:tpope/vim-surround.git
+
 [submodule "config/nvim/plugged/awesome-vim-colorschemes"]
 	path = config/nvim/plugged/awesome-vim-colorschemes
 	url = git@github.com:rafi/awesome-vim-colorschemes.git
+
+[submodule "config/nvim/plugged/vim-elixir"]
+	path = config/nvim/plugged/vim-elixir
+	url = git@github.com:elixir-editors/vim-elixir.git

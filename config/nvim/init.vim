@@ -67,6 +67,11 @@ let g:airline_powerline_fonts = 0
 let g:airline_theme = 'dark'
 
 
+"" Colorscheme
+set background=dark
+colorscheme afterglow 
+
+
 "" Commands
 inoremap jj <Esc>
 noremap <Leader>y "*y

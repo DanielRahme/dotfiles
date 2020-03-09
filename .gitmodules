@@ -41,3 +41,7 @@
 [submodule "config/nvim/plugged/vim-elixir"]
 	path = config/nvim/plugged/vim-elixir
 	url = git@github.com:elixir-editors/vim-elixir.git
+
+[submodule "config/nvim/plugged/vim-cpp-modern"]
+	path = config/nvim/plugged/vim-cpp-modern
+	url = git@github.com:bfrg/vim-cpp-modern.git

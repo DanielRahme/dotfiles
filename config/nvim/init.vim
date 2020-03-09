@@ -41,9 +41,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'elixir-editors/vim-elixir'
+Plug 'tpope/vim-fugitive'               "Git commands in vim
+Plug 'rafi/awesome-vim-colorschemes'    "Colorschems
+Plug 'elixir-editors/vim-elixir'        "Syntax highlight
+Plug 'bfrg/vim-cpp-modern'              "Syntax highlight
 
 call plug#end()
 
@@ -78,3 +79,11 @@ noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
+" Auto-pairs brackets
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O

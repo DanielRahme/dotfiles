@@ -1,5 +1,6 @@
 "" General
 set nocompatible
+syntax on
 set number	        " Show line numbers
 set linebreak	        " Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
@@ -64,7 +65,7 @@ let g:syntastic_check_on_wq = 0
 autocmd vimenter * NERDTree
 
 "" Airline config
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
 
 

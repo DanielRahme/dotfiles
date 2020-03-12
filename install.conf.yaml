@@ -7,15 +7,17 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: my-configs/tmux.conf
 
-    ~/.vimrc: vimrc
+    ~/.vimrc: my-configs/vimrc
 
     ~/.config/nvim: 
-        path: config/nvim
+        path: my-configs/config/nvim
 
     ~/.gitconfig: 
-        path: gitconfig
+        path: my-configs/gitconfig
 
+    ~/.zshrc: 
+        path: my-configs/zshrc
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

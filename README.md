@@ -1,5 +1,5 @@
 # dotfiles
-The Linux configs I use.
+My Linux configuration files deployed by dotbot
 
 
 ## Setup
@@ -18,9 +18,10 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 ## Configurations:
   * Neovim
+  * Tmux
+  * Vim
+  * Zsh
   
 ## TODO:
   * Clean-up and improve README
-  * Tmux config
-  * ZSH config
-  * Update neovim config
+  * Update vimrc

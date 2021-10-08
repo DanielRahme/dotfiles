@@ -19,10 +19,24 @@ set shiftwidth=4	" Number of auto-indent spaces
 set smartindent	        " Enable smart-indent
 set smarttab	        " Enable smart-tabs
 set softtabstop=4	" Number of spaces per Tab
+set signcolumn=number   " Merge line numbering and git changes
+
+
+set undofile
+set undodir=~/.cache/nvim/undo
+set undolevels=10000
+set undoreload=10000
+
+" Update replacement live
+set inccommand=nosplit
 
 set cc=80               " Set column at 80 chars
 set mouse=a             " Enable mouse
 set encoding=utf-8
+
+" Sets ',' as the leader key for hotkeys
+let maplocalleader = ','
+let mapleader = ','
 
 "" Advanced
 set ruler	        " Show row and column ruler information
@@ -67,7 +81,10 @@ autocmd vimenter * NERDTree
 "" Airline config
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
-
+let g:airline#extensions#tabline#enabled = 2
+let g:airline#extensions#tabline#fnamemod = ':t'
+set showtabline=2
+set laststatus=2
 
 "" Colorscheme
 set background=dark
@@ -76,10 +93,10 @@ colorscheme afterglow
 
 "" Commands
 inoremap jj <Esc>
-noremap <Leader>y "*y
-noremap <Leader>p "*p
-noremap <Leader>Y "+y
-noremap <Leader>P "+p
+noremap <leader>y "*y
+noremap <leader>p "*p
+noremap <leader>Y "+y
+noremap <leader>P "+p
 " Auto-pairs brackets
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -88,3 +105,17 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+" Tab and shift tab for switching between buffers
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
+nnoremap <leader>bd :bp\|bd #<CR>
+
+" Change buffers without saving
+set hidden
+
+" Terminal hotkeys and command
+tnoremap <Esc> <C-\><C-n>
+" :term should start in insert and without line numbers
+command Term :set nonu | startinsert | term
+cabbrev term Term

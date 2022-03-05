@@ -43,7 +43,7 @@ set ruler	        " Show row and column ruler information
 
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
-
+set termguicolors
 
 "" Plugins
 " To install the plugins, run cmd in nvim: :PlugInstall
@@ -66,7 +66,7 @@ call plug#end()
 
 "" Colorscheme
 set background=dark
-colorscheme afterglow 
+colorscheme molokayo 
 
 
 "" Syntastic config

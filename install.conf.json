@@ -1,0 +1,39 @@
+[
+  {
+    "defaults": {
+      "link": {
+        "create": true,
+        "relink": true
+      }
+    }
+  },
+  {
+    "clean": [
+      "~"
+    ]
+  },
+  {
+    "link": {
+      "~/.dotfiles": "",
+      "~/.tmux.conf": "my-configs/tmux.conf",
+      "~/.vimrc": "my-configs/vimrc",
+      "~/.config/nvim": {
+        "path": "my-configs/config/nvim"
+      },
+      "~/.gitconfig": {
+        "path": "my-configs/gitconfig"
+      },
+      "~/.zshrc": {
+        "path": "my-configs/zshrc"
+      }
+    }
+  },
+  {
+    "shell": [
+      [
+        "git submodule update --init --recursive",
+        "Installing submodules"
+      ]
+    ]
+  }
+]

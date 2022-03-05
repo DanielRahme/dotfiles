@@ -48,7 +48,6 @@ set backspace=indent,eol,start	" Backspace behaviour
 "" Plugins
 " To install the plugins, run cmd in nvim: :PlugInstall
 call plug#begin('~/.config/nvim/plugged')
-
 Plug 'tpope/vim-sensible'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-syntastic/syntastic'
@@ -60,8 +59,14 @@ Plug 'tpope/vim-fugitive'               "Git commands in vim
 Plug 'rafi/awesome-vim-colorschemes'    "Colorschems
 Plug 'elixir-editors/vim-elixir'        "Syntax highlight
 Plug 'bfrg/vim-cpp-modern'              "Syntax highlight
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "Latest fuzzy finder
+Plug 'junegunn/fzf.vim'                 "Fuzzy finder vim
 call plug#end()
+
+
+"" Colorscheme
+set background=dark
+colorscheme afterglow 
 
 
 "" Syntastic config
@@ -76,7 +81,8 @@ let g:syntastic_check_on_wq = 0
 
 
 "" NERDtree config
-autocmd vimenter * NERDTree
+" Uncomment to start NerdTree at startup
+"autocmd vimenter * NERDTree
 
 "" Airline config
 let g:airline_powerline_fonts = 1
@@ -86,9 +92,28 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 set showtabline=2
 set laststatus=2
 
-"" Colorscheme
-set background=dark
-colorscheme afterglow 
+""Fzf fuzzy finder config
+nnoremap <C-p> :Files<Cr>
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+" Need to install 'bat' for preview colors
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 
 "" Commands

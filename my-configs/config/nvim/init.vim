@@ -57,6 +57,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'               "Git commands in vim
 Plug 'rafi/awesome-vim-colorschemes'    "Colorschems
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'elixir-editors/vim-elixir'        "Syntax highlight
 Plug 'bfrg/vim-cpp-modern'              "Syntax highlight
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "Latest fuzzy finder
@@ -66,7 +67,7 @@ call plug#end()
 
 "" Colorscheme
 set background=dark
-colorscheme molokayo 
+colorscheme dracula
 
 
 "" Syntastic config
@@ -86,8 +87,8 @@ let g:syntastic_check_on_wq = 0
 
 "" Airline config
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dark'
-let g:airline#extensions#tabline#enabled = 2
+let g:airline_theme = 'dracula'
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 set showtabline=2
 set laststatus=2

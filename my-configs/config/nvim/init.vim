@@ -141,6 +141,8 @@ set hidden
 
 " Terminal hotkeys and command
 tnoremap <Esc> <C-\><C-n>
+tnoremap <C-d> <C-\><C-n> :bp\|bd! #<CR>
+nnoremap <leader>bt :bp\|bd! #<CR>
 " :term should start in insert and without line numbers
 command Term :set nonu | startinsert | term
 cabbrev term Term

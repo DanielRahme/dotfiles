@@ -80,6 +80,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Auto resize syntastic list height"
+" see :h syntastic-loclist-callback
+function! SyntasticCheckHook(errors)
+    if !empty(a:errors)
+        let g:syntastic_loc_list_height = min([len(a:errors), 10])
+    endif
+endfunction
+
 
 "" NERDtree config
 " Uncomment to start NerdTree at startup
@@ -142,6 +150,7 @@ set hidden
 
 " Terminal hotkeys and command
 tnoremap <Esc> <C-\><C-n>
+tnoremap jj <C-\><C-n>
 tnoremap <leader>td <C-\><C-n> :bp\|bd! #<CR>
 nnoremap <leader>td :bp\|bd! #<CR>
 " :term should start in insert and without line numbers

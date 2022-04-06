@@ -68,6 +68,9 @@ call plug#end()
 "" Colorscheme
 set background=dark
 colorscheme dracula
+" set sensible highlight matches that don't obscure the text
+:highlight MatchParen cterm=underline ctermbg=black ctermfg=NONE
+:highlight MatchParen gui=underline guibg=black guifg=NONE
 
 
 "" Syntastic config

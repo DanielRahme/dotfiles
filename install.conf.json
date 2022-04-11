@@ -15,7 +15,8 @@
   {
     "link": {
       "~/.dotfiles": "",
-      "~/.tmux.conf": "my-configs/tmux.conf",
+      "~/.tmux.conf": "my-configs/tmux/tmux.conf",
+      "~/.tmux.conf.local": "my-configs/tmux/tmux.conf.local",
       "~/.vimrc": "my-configs/vimrc",
       "~/.config/nvim": {
         "path": "my-configs/config/nvim"

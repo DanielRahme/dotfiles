@@ -43,7 +43,7 @@ set ruler	        " Show row and column ruler information
 
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
-set termguicolors
+"set termguicolors
 
 "" Plugins
 " To install the plugins, run cmd in nvim: :PlugInstall
@@ -66,8 +66,15 @@ call plug#end()
 
 
 "" Colorscheme
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_italic = 1
+let g:gruvbox_italicize_strings = 1
+let g:gruvbox_italicize_comments = 1
+let g:gruvbox_invert_signs = 1
+let g:gruvbox_number_column = 'bg0'
 set background=dark
-colorscheme dracula
+colorscheme gruvbox
+
 " set sensible highlight matches that don't obscure the text
 :highlight MatchParen cterm=underline ctermbg=black ctermfg=NONE
 :highlight MatchParen gui=underline guibg=black guifg=NONE
@@ -98,7 +105,7 @@ endfunction
 
 "" Airline config
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 set showtabline=2

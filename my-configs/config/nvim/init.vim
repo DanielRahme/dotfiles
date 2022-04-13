@@ -69,6 +69,7 @@ call plug#end()
 "" Colorscheme
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_italic = 1
+let g:gruvbox_bold = 0
 let g:gruvbox_italicize_strings = 1
 let g:gruvbox_italicize_comments = 1
 let g:gruvbox_invert_signs = 1

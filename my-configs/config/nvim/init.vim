@@ -89,6 +89,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler_options = '-std=c++2a'
 
 " Auto resize syntastic list height"
 " see :h syntastic-loclist-callback
@@ -166,3 +167,4 @@ nnoremap <leader>td :bp\|bd! #<CR>
 " :term should start in insert and without line numbers
 command Term :set nonu | startinsert | term
 cabbrev term Term
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR> "Change working dir and print

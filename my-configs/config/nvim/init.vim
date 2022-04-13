@@ -62,6 +62,7 @@ Plug 'elixir-editors/vim-elixir'        "Syntax highlight
 Plug 'bfrg/vim-cpp-modern'              "Syntax highlight
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } "Latest fuzzy finder
 Plug 'junegunn/fzf.vim'                 "Fuzzy finder vim
+Plug 'rhysd/vim-clang-format'
 call plug#end()
 
 
@@ -134,6 +135,33 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+
+"" Clang format
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "BasedOnStyle" : "WebKit",
+            \ "IndentWidth" : 4,
+            \ "Language" : "Cpp",
+            \ "Standard" : "Cpp11",
+            \ "AlignConsecutiveDeclarations" : "true",
+            \ "AlignConsecutiveAssignments" : "true",
+            \ "AlignTrailingComments" : "true",
+            \ "AlignAfterOpenBracket" : "true",
+            \ "ColumnLimit" : 0,
+            \ "BreakBeforeBraces" : "Allman",
+            \ "SpaceBeforeCpp11BracedList" : "false",
+            \ "SortIncludes"  : "false",
+            \ "AlwaysBreakTemplateDeclarations" : "true"}
+
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" if you install vim-operator-user
+autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 
 "" Commands

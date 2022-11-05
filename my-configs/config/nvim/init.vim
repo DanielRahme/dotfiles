@@ -67,7 +67,7 @@ call plug#end()
 
 
 "" Colorscheme
-let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_italic = 1
 let g:gruvbox_bold = 0
 let g:gruvbox_italicize_strings = 1
@@ -139,22 +139,8 @@ let g:fzf_colors =
 
 
 "" Clang format
-let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : -4,
-            \ "AllowShortIfStatementsOnASingleLine" : "true",
-            \ "BasedOnStyle" : "WebKit",
-            \ "IndentWidth" : 4,
-            \ "Language" : "Cpp",
-            \ "Standard" : "Cpp11",
-            \ "AlignConsecutiveDeclarations" : "true",
-            \ "AlignConsecutiveAssignments" : "true",
-            \ "AlignTrailingComments" : "true",
-            \ "AlignAfterOpenBracket" : "true",
-            \ "ColumnLimit" : 0,
-            \ "BreakBeforeBraces" : "Allman",
-            \ "SpaceBeforeCpp11BracedList" : "false",
-            \ "SortIncludes"  : "false",
-            \ "AlwaysBreakTemplateDeclarations" : "true"}
+let g:clang_format#detect_style_file = 1
+let g:clang_format#auto_format = 1
 
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
@@ -171,14 +157,15 @@ noremap <leader>y "*y
 noremap <leader>p "*p
 noremap <leader>Y "+y
 noremap <leader>P "+p
+
 " Auto-pairs brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 
 " Tab and shift tab for switching between buffers
 nnoremap <Tab> :bn<CR>

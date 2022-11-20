@@ -15,6 +15,7 @@
   {
     "link": {
       "~/.dotfiles": "",
+      "~/.config/kitty": "my-configs/kitty",
       "~/.tmux.conf": "my-configs/tmux/tmux.conf",
       "~/.tmux.conf.local": "my-configs/tmux/tmux.conf.local",
       "~/.vimrc": "my-configs/vimrc",

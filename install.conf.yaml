@@ -7,6 +7,9 @@
 
 - link:
     ~/.dotfiles: ''
+
+    ~/.config/kitty: my-configs/kitty
+
     ~/.tmux.conf: my-configs/tmux.conf
 
     ~/.vimrc: my-configs/vimrc

@@ -50,5 +50,15 @@ require("lazy").setup({
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
         }
-    }
+    },
+    {
+        'nvim-tree/nvim-tree.lua',
+        config = function() require('plugins.nvim-tree') end,
+        dependencies = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+    },
+    {
+        -- Plugin
+    },
 })

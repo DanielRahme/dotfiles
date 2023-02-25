@@ -22,7 +22,7 @@ require("lazy").setup({
         dependencies = { 'nvim-lua/plenary.nvim' },
         config = function() require('plugins.telescope') end,
     },
-    { 
+    {
     -- Syntax
         'nvim-treesitter/nvim-treesitter', cmd = "TSUpdate",
         config = function() require('plugins.treesitter') end,
@@ -52,13 +52,29 @@ require("lazy").setup({
         }
     },
     {
-        'nvim-tree/nvim-tree.lua',
-        config = function() require('plugins.nvim-tree') end,
-        dependencies = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
+        'nvim-tree/nvim-web-devicons',
+        config = function() require('plugins.nvim-web-devicons') end,
     },
     {
-        -- Plugin
+        'nvim-tree/nvim-tree.lua',
+        dependencies = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        config = function() require('plugins.nvim-tree') end,
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        config = function() require('plugins.lualine') end,
+    },
+    {
+        'kdheepak/tabline.nvim',
+        config = function() require('plugins.tabline') end,
+        dependencies = { 
+            { 'nvim-lualine/lualine.nvim', opt=true },
+            {'nvim-tree/nvim-web-devicons', opt = true},
+        }
+    },
+    {
+        -- Plugins
     },
 })

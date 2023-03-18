@@ -73,4 +73,4 @@ map("n", "<leader>4", function()
 end, { desc = "Go to harpoon file 4" })
 
 -- Undotree
-map("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Toggle undo-tree" })
+map("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "Toggle undo-tree" })

@@ -12,6 +12,8 @@ return {
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
   },
+
+  -- Colorschemes
   {
     "folke/tokyonight.nvim",
     opts = {
@@ -19,5 +21,15 @@ return {
         colors.border = "#565f89"
       end,
     },
+  },
+  { "rose-pine/neovim" },
+  { "rebelot/kanagawa.nvim" },
+  { "catppuccin/nvim" },
+  { "EdenEast/nightfox.nvim" },
+  {
+    "stevearc/oil.nvim",
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    keys = { { "-", "<cmd>Oil<cr>", desc = "Oil: Filesystem in Neovim" } },
   },
 }

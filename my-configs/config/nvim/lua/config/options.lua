@@ -58,3 +58,6 @@ opt.relativenumber = false -- Relative line numbers
 opt.tabstop = 4 -- Number of spaces tabs count for
 opt.shiftwidth = 4 -- Size of an indent
 opt.winbar = "%=%m %f"
+
+-- Tokyonight theme
+vim.g.tokyonight_colors = { border = "orange" }

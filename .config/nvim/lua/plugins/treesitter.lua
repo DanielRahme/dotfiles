@@ -9,7 +9,6 @@ return {
       "cmake",
       "make",
       "bash",
-      "help",
       "html",
       "json",
       "java",

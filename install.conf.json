@@ -15,18 +15,18 @@
   {
     "link": {
       "~/.dotfiles": "",
-      "~/.config/kitty": "my-configs/kitty",
-      "~/.tmux.conf": "my-configs/tmux/tmux.conf",
-      "~/.tmux.conf.local": "my-configs/tmux/tmux.conf.local",
-      "~/.vimrc": "my-configs/vimrc",
+      "~/.config/kitty": ".config/kitty",
+      "~/.tmux.conf": "tmux/tmux.conf",
+      "~/.tmux.conf.local": "tmux/tmux.conf.local",
+      "~/.vimrc": ".vimrc",
       "~/.config/nvim": {
-        "path": "my-configs/config/nvim"
+        "path": ".config/nvim"
       },
       "~/.gitconfig": {
-        "path": "my-configs/gitconfig"
+        "path": ".gitconfig"
       },
       "~/.zshrc": {
-        "path": "my-configs/zshrc"
+        "path": ".zshrc"
       }
     }
   },

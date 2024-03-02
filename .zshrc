@@ -7,13 +7,15 @@ alias vim=nvim
 ## Exports
 export EDITOR=nvim
 export ZSH="$HOME/.oh-my-zsh/"
+export ANDROID_HOME="/home/danielrahme/Android/Sdk/"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="dst"
 
 plugins=(git)
 
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -79,5 +81,24 @@ plugins=(git)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/danielrahme/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/danielrahme/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/home/danielrahme/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/danielrahme/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/danielrahme/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/home/danielrahme/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
 
 source $ZSH/oh-my-zsh.sh

@@ -12,19 +12,6 @@ return {
     config = true,
   },
 
-  -- Colorschemes
-  {
-    "folke/tokyonight.nvim",
-    opts = {
-      on_colors = function(colors)
-        colors.border = "#565f89"
-      end,
-    },
-  },
-  { "rose-pine/neovim" },
-  { "rebelot/kanagawa.nvim" },
-  { "catppuccin/nvim" },
-  { "EdenEast/nightfox.nvim" },
   {
     "stevearc/oil.nvim",
     opts = {},

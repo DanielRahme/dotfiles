@@ -4,14 +4,18 @@ local M = {}
 M.my_mappings = {
   i = {
     ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-  }
+  },
+
+  t = {
+    ["jj"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" },
+  },
 }
 
 -- DAP debugger
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = {"<cmd> DapToggleBreakpoint <CR>", "DAP toggle breakpoint"}
+    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>", "DAP toggle breakpoint" }
   }
 }
 

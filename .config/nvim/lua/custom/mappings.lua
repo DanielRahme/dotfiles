@@ -15,7 +15,8 @@ M.my_mappings = {
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>", "DAP toggle breakpoint" }
+    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>", "DAP toggle breakpoint" },
+    ["<leader>dr"] = { "<cmd> DapContinue <CR> ", "Run debugger" }
   }
 }
 

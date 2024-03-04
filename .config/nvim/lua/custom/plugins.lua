@@ -5,6 +5,8 @@ local plugins = {
       ensure_installed = {
         -- C++
         "clangd",
+        "clang-format",
+        "codelldb",
         -- Python
         "pyright",
         "mypy",
@@ -16,7 +18,8 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = { "python" },
+    event = "VeryLazy",
+    --ft = { "python", "cpp" },
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -29,6 +32,17 @@ local plugins = {
     end
   },
   -- DAP debugger
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "nfussenegger/nvim-dap",
+    },
+    opts = {
+      handlers = {},
+    }
+  },
   {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",

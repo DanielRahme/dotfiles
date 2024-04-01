@@ -1,19 +1,8 @@
 local plugins = {
   {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        -- C++
-        "clangd",
-        "clang-format",
-        "codelldb",
-        -- Python
-        "pyright",
-        "mypy",
-        "ruff",
-        "debugpy",
-        "black",
-      },
+    {
+      "tpope/vim-fugitive",
+      lazy = false,
     },
   },
   {
@@ -37,7 +26,21 @@ local plugins = {
     event = "VeryLazy",
     dependencies = {
       "williamboman/mason.nvim",
-      "nfussenegger/nvim-dap",
+      opts = {
+        ensure_installed = {
+          -- C++
+          "clangd",
+          "clang-format",
+          "codelldb",
+          -- Python
+          "pyright",
+          "mypy",
+          "debugpy",
+          "black",
+          -- Lua
+          "stylua",
+        },
+      },
     },
     opts = {
       handlers = {},

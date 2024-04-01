@@ -32,4 +32,22 @@ M.dap_python = {
   }
 }
 
+M.undotree = {
+  n = {
+    ["<leader>ut"] = {
+      "<cmd> UndotreeToggle <CR>",
+      "Toggle undotree"
+    }
+  }
+}
+
+M.oil = {
+  n = {
+    ["-"] = {
+      "<cmd> Oil <CR>",
+      "Oil open directory"
+    }
+  }
+}
+
 return M

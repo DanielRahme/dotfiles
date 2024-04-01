@@ -23,6 +23,28 @@ local plugins = {
       },
     },
     {
+      "stevearc/oil.nvim",
+      lazy = false,
+      config = function(_, opts)
+        require("oil").setup()
+        require("core.utils").load_mappings "oil"
+      end,
+    },
+    {
+      "mbbill/undotree",
+      lazy = false,
+      config = function(_, opts)
+        require("core.utils").load_mappings "undotree"
+      end,
+    },
+    {
+      "ggandor/leap.nvim",
+      lazy = false,
+      config = function()
+        require("leap").add_default_mappings()
+      end,
+    },
+    {
       "jose-elias-alvarez/null-ls.nvim",
       event = "VeryLazy",
       --ft = { "python", "cpp" },
@@ -35,7 +57,7 @@ local plugins = {
       config = function()
         require "plugins.configs.lspconfig"
         require "custom.configs.lspconfig"
-      end
+      end,
     },
     -- DAP debugger
     {
@@ -47,14 +69,14 @@ local plugins = {
       },
       opts = {
         handlers = {},
-      }
+      },
     },
     {
       "rcarriga/nvim-dap-ui",
       dependencies = "mfussenegger/nvim-dap",
       config = function()
-        local dap = require("dap")
-        local dapui = require("dapui")
+        local dap = require "dap"
+        local dapui = require "dapui"
         dapui.setup()
         dap.listeners.after.event_initialized["dapui_config"] = function()
           dapui.open()
@@ -65,13 +87,13 @@ local plugins = {
         dap.listeners.before.event_exited["dapui_config"] = function()
           dapui.close()
         end
-      end
+      end,
     },
     {
       "mfussenegger/nvim-dap",
       config = function(_, opts)
-        require("core.utils").load_mappings("dap")
-      end
+        require("core.utils").load_mappings "dap"
+      end,
     },
     {
       "mfussenegger/nvim-dap-python",
@@ -83,7 +105,7 @@ local plugins = {
       config = function(_, opts)
         local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
         require("dap-python").setup(path)
-        require("core.utils").load_mappings("dap_python")
+        require("core.utils").load_mappings "dap_python"
       end,
     },
   },

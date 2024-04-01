@@ -5,6 +5,14 @@ local plugins = {
       lazy = false,
     },
     {
+      "echasnovski/mini.surround",
+      lazy = false,
+      version = false,
+      opts = function()
+        return require "custom.configs.surround"
+      end,
+    },
+    {
       "williamboman/mason.nvim",
       opts = {
         ensure_installed = {
@@ -46,9 +54,9 @@ local plugins = {
     },
     {
       "nvim-treesitter/nvim-treesitter",
-      opts = function ()
+      opts = function()
         return require "custom.configs.treesitter"
-      end
+      end,
     },
     {
       "jose-elias-alvarez/null-ls.nvim",

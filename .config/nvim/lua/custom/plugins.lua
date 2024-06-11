@@ -31,6 +31,12 @@ local plugins = {
       },
     },
     {
+      "simrat39/symbols-outline.nvim",
+      cmd = "SymbolsOutline",
+      keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+      config = true,
+    },
+    {
       "stevearc/oil.nvim",
       lazy = false,
       config = function(_, opts)
@@ -46,11 +52,20 @@ local plugins = {
       end,
     },
     {
-      "ggandor/leap.nvim",
-      lazy = false,
-      config = function()
-        require("leap").add_default_mappings()
-      end,
+      "smoka7/hop.nvim",
+      version = "*",
+      opts = {
+        keys = "etovxqpdygfblzhckisuran",
+      },
+      keys = {
+        {
+          "<leader>fj",
+          function()
+            require("hop").hint_words()
+          end,
+          mode = { "n", "x", "o" },
+        },
+      },
     },
     {
       "nvim-treesitter/nvim-treesitter",

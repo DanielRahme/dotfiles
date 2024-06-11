@@ -52,6 +52,12 @@ local plugins = {
       end,
     },
     {
+      "nvim-tree/nvim-tree.lua",
+      opts = function()
+        return require "custom.configs.nvimtree"
+      end,
+    },
+    {
       "smoka7/hop.nvim",
       version = "*",
       opts = {

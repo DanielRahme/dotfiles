@@ -12,6 +12,7 @@ local options = {
     "markdown",
     "yaml",
     "json",
+    "rust",
   },
 
   highlight = {

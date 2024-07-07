@@ -13,6 +13,13 @@ local plugins = {
       end,
     },
     {
+      "nosduco/remote-sshfs.nvim",
+      -- Create SSH hosts in ~/.ssh/config
+      dependencies = { "nvim-telescope/telescope.nvim" },
+      opts = {},
+      require("telescope").load_extension "remote-sshfs",
+    },
+    {
       "williamboman/mason.nvim",
       opts = {
         ensure_installed = {

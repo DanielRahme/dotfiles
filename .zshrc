@@ -70,7 +70,7 @@ setopt hist_find_no_dups
 
 # thefuck integration
 if command -v thefuck &> /dev/null; then
-  eval "$(thefuck --alias)"
+  eval $(thefuck --alias)
 else
   echo "thefuck unavailable"
 fi

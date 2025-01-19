@@ -13,11 +13,10 @@ return {
     --end,
   },
   {
-    "tpope/vim-fugitive",
-    lazy = false,
+    require "plugins.oil"
   },
   {
-    require "plugins.oil"
+    require "git"
   },
   {
     require "plugins.outline"

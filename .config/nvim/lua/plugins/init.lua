@@ -16,7 +16,7 @@ return {
     require "plugins.oil"
   },
   {
-    require "git"
+    require "plugins.git"
   },
   {
     require "plugins.outline"
@@ -24,4 +24,12 @@ return {
   {
     require "plugins.hop"
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    enabled = false
+  },
+  {
+    "neovim/nvim-lspconfig",
+    enabled = false
+  }
 }
